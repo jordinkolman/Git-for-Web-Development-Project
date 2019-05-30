@@ -1,0 +1,45 @@
+Stretch Goal Solutions
+    -Merge Conflict
+        - A merge conflict is something that occurs when either 2 different changes are made to the same line of a file, or if a person edits a file while another person deletes it. 
+        - A competing line change conflict is resolved by choosing which changes to incorporate in the new commit.
+            - Open GitBash
+            - Navigate into the repo with the conflict (cd Repository-Name).
+            - Generate a list of which files are affected by the conflict using git status.
+            - Navigate to the file with the conflict in a text editor.
+            - Search for the conflict marker in the file (<<<<<<<).
+                - Changes from the head or base branch are marked after line <<<<<<< HEAD 
+                - The symbol ======= divides your changes from the other branches' changes.
+                ->>>>>>> Branch-Name will denote which branch has conflicting commands.
+            - Decide which of the changes you want to keep, incorporate both, or add a completely new change.
+            - Follow the normal add and commit steps for making changes to a branch.
+            - Either merge the branches, or push your changes to a remote repo and merge the changes in a pull request.
+        - A removed file conflict is resolved by choosing whether to delete or keep the deleted file in a new commit.
+            - Open GitBash.
+            - Navigate into the repo with the merge conflict.
+            - Generate a git status list of files affected by the conflict.
+            - Open the affected file in a text editor.
+            - Decide if you want to keep the file. You may want to review the latest changes first.
+                - To add the file back to the repo: $ git add (filename).
+                - To remove the file from the repo: $git rm (file name).
+            -Commit your changes to the repo with comment on the decision made.
+
+    -Pull, Rebase, and Merge
+        - Pull is used to download changes and directly merge and integrage them into HEAD. Command: $ git pull <remote> <branch>.
+        - Rebase is used to take all the changes from one branch and replay them on another. Command: $ git rebase <branch>.
+        - Merge is used to perform a three-way merge of the latest branch snapshots with different changes and the most recent common ancestor of the two. It takes all three of these snapshots and combines them into a new snapshot and commit. Command: $ git merge <branch>.
+    
+    -Reset, Revert, and Clean
+        - Reset is used to remove a file from staging, but leave the current working directory intact. No changes are overwritten. Command: $ git reset <file>.
+        - Revert creates a new commit that undoes all of the changes made in the commit being reverted, then applies it to the current branch. Command: $ git revert <commit>.
+        - Clean is used to show which files would be removed from working directory, then executing that removal.
+            - Command to show files to delete: $ git clean -n.
+            - Comand to execute the clean: $ git clean -f.
+    
+    -Set up GUI for Git
+        - After researching GUI's and seeing suggestions from classmates, I decided to set up the SourceTree GUI. This allowed me to have a visual representation of my repo's, making organization and understanding of the structure much easier for me.
+    
+    -Set up SSH keys for GitHub
+        - After doing some research, I was able to successfully set up SSH keys so that I would not need a password to push.
+
+
+ 
